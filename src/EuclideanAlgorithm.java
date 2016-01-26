@@ -7,13 +7,12 @@ public class EuclideanAlgorithm {
         int divisor;
 
         Scanner scanner = new Scanner(System.in);
-        CommonDivisor commonDivisor = new CommonDivisor();
 
         System.out.print("Please, enter first integer value: ");
         a = scanner.nextInt();
         System.out.print("Please, enter second integer value: ");
         b = scanner.nextInt();
-        divisor = commonDivisor.findCommonDivisor(a, b);
+        divisor = CommonDivisor.findCommonDivisor(a, b);
 
         if (divisor > 1) {
             System.out.println("Common divisor is: " + divisor);

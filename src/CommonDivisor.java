@@ -1,5 +1,5 @@
 public class CommonDivisor {
-    public int findCommonDivisor(int a, int b) {
+    public static int findCommonDivisor(int a, int b) {
         if (a == 0 || b == 0)
             return 0;
         if (a < 0)
