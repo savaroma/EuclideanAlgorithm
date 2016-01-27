@@ -1,7 +1,8 @@
 public class CommonDivisor {
     public static int findCommonDivisor(int a, int b) {
         if (a < 0)
-            a *= -1;
+            a *= -1;//здесь можно использовать метод класса Math, который берет абсолютное значение, тем самым расширяете знание
+        //стандартных джавовских классов
         if (b < 0)
             b *= -1;
 
@@ -9,7 +10,7 @@ public class CommonDivisor {
             if (a > b) {
                 a %= b;
             }
-            else {
+            else { //поднять элс к фигурной скобке на строку выше
                 b %= a;
             }
         }

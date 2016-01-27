@@ -28,7 +28,7 @@ public class EuclideanAlgorithm {
         if (divisor > 1) {
             System.out.println("Common divisor is: " + divisor);
         } else {
-            System.out.println("Integers " + a + " and " + b + " don't have command divisor.");
+            System.out.println("Integers " + a + " and " + b + " don't have command divisor.");//слово command - вроде как нужно common
         }
     }
 }
