@@ -1,3 +1,5 @@
+package com.switchup.euclidean_int;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,15 +11,15 @@ public class EuclideanAlgorithm {
 
         Scanner scanner = new Scanner(System.in);
 
-        boolean isCorrectValue = true;
-        while(isCorrectValue) {
+        boolean isIncorrectValue = true;
+        while(isIncorrectValue) {
             try {
                 System.out.print("Please, enter first integer value: ");
                 a = scanner.nextInt();
                 System.out.print("Please, enter second integer value: ");
                 b = scanner.nextInt();
                 divisor = CommonDivisor.findCommonDivisor(a, b);
-                isCorrectValue = false;
+                isIncorrectValue = false;
             } catch (InputMismatchException e) {
                 System.out.println("\nYou entered wrong value!\n"
                        + "Please, enter INTEGER value in the range from -2 147 483 647 to 2 147 483 647\n");
@@ -26,9 +28,9 @@ public class EuclideanAlgorithm {
         }
 
         if (divisor > 1) {
-            System.out.println("Common divisor is: " + divisor);
+            System.out.println("\nCommon divisor is: " + divisor);
         } else {
-            System.out.println("Integers " + a + " and " + b + " don't have command divisor.");//слово command - вроде как нужно common
+            System.out.println("\nIntegers " + a + " and " + b + " don't have common divisor.");
         }
     }
 }
