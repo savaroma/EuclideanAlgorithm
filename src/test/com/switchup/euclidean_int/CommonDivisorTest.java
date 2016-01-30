@@ -40,5 +40,7 @@ public class CommonDivisorTest {
     @Test
     public void testSetCommonDivisor() throws Exception {
         assertEquals(result, commonDivisor.setCommonDivisor(firstValue, secondValue));
+        //метод setCommonDivisor - статический. его нет смысла вызывать у объекта, можно вызывать через имя класса.
+        //Об этом говорит и идея, читайте подчеркивания-подсвечивания.
     }
 }

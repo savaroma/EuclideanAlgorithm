@@ -28,8 +28,11 @@ public class EuclideanAlgorithm {
             }
         }
 
+        //Закрыть сканнер не помешает.
+
         if (divisor == Integer.MIN_VALUE) {
-            System.out.println("\nCommon divisor is: 2 147 483 648.");
+            System.out.println("\nCommon divisor is: 2 147 483 648.");//здесь не стоит харкодить число
+            //лучше снова использовать Integer.MIN_VALUE
         }
         if (divisor > 1) {
             System.out.println("\nCommon divisor is: " + divisor);

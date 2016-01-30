@@ -28,6 +28,8 @@ public class EuclideanAlgorithm {
             }
         }
 
+        //можно добавить закрытие сканнера
+
         if (divisor.intValue() > 1) {
             System.out.println("\nCommon divisor is: " + divisor);
         } else {
