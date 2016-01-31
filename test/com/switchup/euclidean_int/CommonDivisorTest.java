@@ -1,6 +1,5 @@
-package test.com.switchup.euclidean_int;
+package com.switchup.euclidean_int;
 
-import com.switchup.euclidean_int.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -14,7 +13,6 @@ public class CommonDivisorTest {
     private int firstValue;
     private int secondValue;
     private int result;
-    public CommonDivisor commonDivisor = new CommonDivisor();
 
     public CommonDivisorTest(int firstValue, int secondValue, int result) {
         this.firstValue = firstValue;
@@ -39,8 +37,6 @@ public class CommonDivisorTest {
 
     @Test
     public void testSetCommonDivisor() throws Exception {
-        assertEquals(result, commonDivisor.setCommonDivisor(firstValue, secondValue));
-        //метод setCommonDivisor - статический. его нет смысла вызывать у объекта, можно вызывать через имя класса.
-        //Об этом говорит и идея, читайте подчеркивания-подсвечивания.
+        assertEquals(result, CommonDivisor.setCommonDivisor (firstValue, secondValue));
     }
 }
