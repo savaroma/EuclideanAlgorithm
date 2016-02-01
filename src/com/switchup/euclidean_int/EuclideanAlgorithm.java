@@ -26,6 +26,10 @@ public class EuclideanAlgorithm {
                        + "Please, enter INTEGER value in the range from %,d to %,d\n",
                         Integer.MIN_VALUE, Integer.MAX_VALUE);
                 scanner.nextLine();
+            } catch (DoubleZerosException e) {
+                System.out.println("\n" + e.getMessage());
+                isDivisorFound = false;
+                break;
             } catch (CommonDivisorNotFoundException e) {
                 System.out.println("\n" + e.getMessage(a, b));
                 isDivisorFound = false;
