@@ -12,6 +12,10 @@ public class CommonDivisor {
     }
 
     public static int searchCommonDivisor(int a, int b) throws CommonDivisorNotFoundException {
+        if (((a == 1) || (b == 1))) {
+            return 1;
+        }
+
         while (a != 0 && b != 0) {
             if (Math.abs(a) > Math.abs(b)) {
                 a %= b;
