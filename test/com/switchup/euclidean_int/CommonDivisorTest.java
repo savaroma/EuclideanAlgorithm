@@ -1,42 +1,21 @@
 package com.switchup.euclidean_int;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-
-import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
-@RunWith(value = Parameterized.class)
 public class CommonDivisorTest {
-    private int firstValue;
-    private int secondValue;
-    private int result;
-
-    public CommonDivisorTest(int firstValue, int secondValue, int result) {
-        this.firstValue = firstValue;
-        this.secondValue = secondValue;
-        this.result = result;
+    @Test (timeout = 3000)
+    public void testSearchCommonDivisor() {
+        int a = -550;
+        int b = 15;
+        assertEquals(5, CommonDivisor.searchCommonDivisor(a, b));
     }
 
-    @Parameterized.Parameters(name = "{index}: common divisor({0} and {1}) = {2}")
-    public static Iterable<Object[]> getValues() {
-        return Arrays.asList(new Object[][] {
-                {15, -25, 5},
-                {-121, 11, 11},
-                {-49, 378, 7},
-                {Integer.MIN_VALUE, 154878, 2},
-                {1236546, Integer.MIN_VALUE, 2},
-                {Integer.MAX_VALUE, 2546, 1},
-                {-129, Integer.MAX_VALUE, 1},
-                {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE},
-                {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE}
-        });
-    }
-
-    @Test
-    public void testSetCommonDivisor() throws Exception {
-        assertEquals(result, CommonDivisor.setCommonDivisor (firstValue, secondValue));
+    @Test (timeout = 3000)
+    public void testSearchWithMinIntegerValue() {
+        int a = Integer.MIN_VALUE;
+        int b = 16;
+        assertTrue(16 == CommonDivisor.searchWithMinIntegerValue(a, b));
     }
 }
