@@ -3,9 +3,7 @@ package com.switchup.euclidean_int;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
 import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)
@@ -28,10 +26,8 @@ public class CommonDivisorParameterizeTest {
                 {-49, 378, 7},
                 {Integer.MIN_VALUE, 154878, 2},
                 {1236546, Integer.MIN_VALUE, 2},
-                {Integer.MAX_VALUE, 2546, 1},
-                {-129, Integer.MAX_VALUE, 1},
+                {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE},
                 {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE},
-                {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE}
         });
     }
 

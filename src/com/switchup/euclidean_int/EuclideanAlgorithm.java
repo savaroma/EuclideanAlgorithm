@@ -11,6 +11,7 @@ public class EuclideanAlgorithm {
 
         Scanner scanner = new Scanner(System.in);
 
+        boolean isDivisorFound = true;
         boolean isIncorrectValue = true;
         while(isIncorrectValue) {
             try {
@@ -25,16 +26,19 @@ public class EuclideanAlgorithm {
                        + "Please, enter INTEGER value in the range from %,d to %,d\n",
                         Integer.MIN_VALUE, Integer.MAX_VALUE);
                 scanner.nextLine();
+            } catch (CommonDivisorNotFoundException e) {
+                System.out.println("\n" + e.getMessage(a, b));
+                isDivisorFound = false;
+                isIncorrectValue = false;
             }
         }
 
-        if (divisor == Integer.MIN_VALUE) {
-            System.out.println("\nCommon divisor is: 2 147 483 648.");
-        }
-        if (divisor > 1) {
-            System.out.println("\nCommon divisor is: " + divisor);
-        } else {
-            System.out.println("\nIntegers " + a + " and " + b + " don't have common divisor.");
+        if (isDivisorFound) {
+            if (divisor == Integer.MIN_VALUE) {
+                System.out.println("\nCommon divisor is: 2 147 483 648.");
+            } else {
+                System.out.println("\nCommon divisor is: " + divisor);
+            }
         }
     }
 }
