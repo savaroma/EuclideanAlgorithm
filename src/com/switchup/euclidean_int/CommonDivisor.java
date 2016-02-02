@@ -16,7 +16,7 @@ public class CommonDivisor {
             throw new DoubleZerosException();
         }
 
-        if (((a == 1) || (b == 1))) {
+        if (((Math.abs(a) == 1) || (Math.abs(b) == 1))) {
             return 1;
         }
 
