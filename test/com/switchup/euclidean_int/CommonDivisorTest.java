@@ -18,10 +18,10 @@ public class CommonDivisorTest {
         assertTrue(16 == CommonDivisor.searchWithMinIntegerValue(a, b));
     }
 
-    @Test (timeout = 3000, expected = CommonDivisorNotFoundException.class)
-    public void testCommonDivisorNotFoundException() throws Exception {
-        int a = Integer.MAX_VALUE;
-        int b = 254876;
+    @Test (timeout = 3000, expected = DoubleZerosException.class)
+    public void testDoubleZerosException() throws Exception {
+        int a = 0;
+        int b = 0;
 
         CommonDivisor.setCommonDivisor(a, b);
     }

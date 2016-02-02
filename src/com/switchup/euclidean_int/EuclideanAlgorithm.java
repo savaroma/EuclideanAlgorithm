@@ -29,10 +29,6 @@ public class EuclideanAlgorithm {
             } catch (DoubleZerosException e) {
                 System.out.println("\n" + e.getMessage());
                 isDivisorFound = false;
-                break;
-            } catch (CommonDivisorNotFoundException e) {
-                System.out.println("\n" + e.getMessage(a, b));
-                isDivisorFound = false;
                 isIncorrectValue = false;
             }
         }

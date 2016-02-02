@@ -24,6 +24,7 @@ public class CommonDivisorParameterizeTest {
                 {15, -25, 5},
                 {-121, 11, 11},
                 {-49, 378, 7},
+                {1, -1, 1},
                 {Integer.MIN_VALUE, 154878, 2},
                 {1236546, Integer.MIN_VALUE, 2},
                 {Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE},
